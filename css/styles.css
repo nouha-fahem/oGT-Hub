@@ -4177,7 +4177,8 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
-}
+  justify-content: center;  /* Horizontally center */
+  align-items: center}
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -10955,6 +10956,17 @@ header.masthead {
   position: relative;
 }
 
+header.masthead::before {
+  content: ""; /* Needed for the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  z-index: 1; /* Ensure the overlay is above the background but below the content */
+}
+
 header.masthead .container {
   position: relative;
   z-index: 2; /* Ensures the text is above the background image */
@@ -11327,6 +11339,64 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
 }
+
+
+
+/*  */
+section#campus {
+  background-color: #212529;
+  background-image: url("../assets/img/map-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+section#campus .section-heading {
+  color: #fff;
+}
+section#campus form#campusForm .form-group {
+  margin-bottom: 1.5rem;
+}
+section#campus form#campusForm .form-group input,
+section#campus form#campusForm .form-group textarea {
+  padding: 1.25rem;
+}
+section#campus form#campusForm .form-group input.form-control {
+  height: auto;
+}
+section#campus form#campusForm .form-group-textarea {
+  height: 100%;
+}
+section#campus form#campusForm .form-group-textarea textarea {
+  height: 100%;
+  min-height: 10rem;
+}
+section#campus form#campusForm p.help-block {
+  margin: 0;
+}
+section#campus form#campusForm .form-control:focus {
+  border-color: #ffc800;
+  box-shadow: none;
+}
+section#campus form#campusForm ::-webkit-input-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+section#campus form#campusForm :-moz-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+section#campus form#campusForm ::-moz-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+section#campus form#campus :-ms-input-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+
 
 .footer {
   text-align: center;
